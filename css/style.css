@@ -1,0 +1,187 @@
+/* STYLING GUIDE
+
+COLOURS:
+Light Blue: #F0F8FF;
+Azure: #0B85FE;
+Denim: #0161c1/rgb(1, 97, 193);
+Turqoise: #41D3BD;
+
+FONTS:
+font-family: 'Lemonada', cursive;
+*/
+
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family: "Lemonada", cursive;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::selection {
+  color: none;
+  background: none;
+}
+
+/* HEADER */
+header {
+  -webkit-tap-highlight-color: rgba(1, 97, 193, 0.3);
+  border-bottom: 2px solid #0161c1;
+  background: #F0F8FF;
+  color: #000;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* CANVAS */
+canvas {
+  margin: 2% auto;
+  box-sizing: border-box;
+  width: 95vw;
+  max-width: 600px;
+  height: calc(95vw * 0.6);
+  max-height: 360px;
+  display: block;
+  border: 2px solid black;
+}
+
+/* GAME PAGE - MAIN */
+#birdImage {
+  display: none;
+}
+
+main {
+  margin: auto 0;
+}
+
+main > p {
+  margin-top: 1rem;
+  padding: 0 .5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+main > p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.keys, .touch {
+  display: none;
+}
+
+/* INDEX PAGE */
+section {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 800px;
+}
+
+article {
+  margin: .5rem auto;
+  width: 70vw;
+  max-width: 180px;
+  height: auto;
+  background: #F0F8FF;
+  color: #0161c1;
+  border-radius: 5px;
+  border: 2px solid #0161c1;
+  cursor: pointer;
+}
+
+.icon {
+  display: block;
+  margin: .25rem auto;
+  padding: 5px;
+  height: 80%;
+  max-height: 120px;
+  width: auto;
+  max-width: 90%;
+}
+
+article p {
+  padding: .5rem;
+  font-size: .85rem;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: .5rem;
+  background: #F0F8FF;
+  color: #0161c1;
+  border-radius: 5px;
+  border: 2px solid #0161c1;
+  font-family: "Lemonada", cursive;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+article:active, button:active {
+  -webkit-box-shadow: inset 0px 0px 5px #0161c1;
+  -moz-box-shadow: inset 0px 0px 5px #0161c1;
+  box-shadow: inset 0px 0px 5px #0161c1;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  border-top: 2px solid #0161c1;
+  background-color: #F0F8FF;
+  color: #000;
+  text-align: left;
+  font-size: .75rem;
+}
+
+/* MEDIA QUERIES */
+@media (orientation: landscape){
+  canvas {
+    height: 85vh;
+    max-height: 360px;
+    width: calc(85vh / 0.6);
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  main > p {
+    margin-top: .5rem;
+  }
+
+  main > p:last-of-type {
+    margin-bottom: .5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  section {
+    flex-direction: column-reverse;
+  }
+}
