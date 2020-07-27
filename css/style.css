@@ -19,8 +19,8 @@ font-family: 'Lemonada', cursive;
 }
 
 body {
-  min-height: -webkit-fill-available;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: -webkit-fill-available;
   font-family: "Lemonada", cursive;
   color: #000;
   background-color: #fff;
